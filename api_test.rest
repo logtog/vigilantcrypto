@@ -1,0 +1,23 @@
+get http://localhost:8000/api/users
+
+###
+post http://localhost:8000/api/users/
+content-type: application/json
+
+{   
+    "id": "",
+    "name": "John",
+    "password": "4242525"
+}
+###
+put http://localhost:8000/api/users/4
+content-type: application/json
+
+{
+    "name": "fulano",
+    "password": "2425252525"
+}
+
+###
+
+DELETE http://localhost:8000/api/users/4
