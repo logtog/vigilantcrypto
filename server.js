@@ -1,11 +1,13 @@
 const { time } = require("console");
 const fs = require("fs");
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 
 var date_time = new Date();
 
 const port = 8000;
+app.use(bodyParser.json());
 
 app.listen(port, "0.0.0.0", () => {
   console.log("Servidor Mockup ON!");
@@ -33,12 +35,12 @@ app.get("/api/users/:id", (req, res) => {
 
 //POST
 app.post("/api/users", (req, res) => {
-  const user = req.body;
+  let user = req.body;
 
   const firstId = LISTA
     ? Math.max.apply(
         null,
-        LISTA.map((idIterator) => idIterator.id)
+        LISTA.map((listIterator) => listIterator.id)
       ) + 1
     : 1;
 
@@ -48,7 +50,7 @@ app.post("/api/users", (req, res) => {
 
   data("POST", req.ip);
 
-  res.status(201).send(LISTA);
+  res.status(201).send(user);
 });
 
 //PUT
@@ -72,6 +74,8 @@ app.put("/api/users/:id", (req, res) => {
 app.delete("/api/users/:id", (req, res) => {
   LISTA = LISTA.filter((list) => list.id != req.params.id);
 
+  data("DELETE", req.ip);
+
   res.status(204).send({});
 });
 
@@ -88,12 +92,10 @@ function data(args, ip) {
 var LISTA = [
   {
     id: 1,
-    name: [
-      {
-        firs_name: "Nair",
-        about_name: "Sophie Daiane Almada",
-      },
-    ],
+    name: {
+      first_name: "Nair",
+      about_name: "Sophie Daiane Almada",
+    },
     email: "nair_almada@fitttransportes.com.br",
     phone_number: "(83) 99789-2255",
     cpf: "024.531.861-59",
@@ -102,12 +104,10 @@ var LISTA = [
   },
   {
     id: 2,
-    name: [
-      {
-        firs_name: "Erick",
-        about_name: "Manuel Lima",
-      },
-    ],
+    name: {
+      first_name: "Erick",
+      about_name: "Manuel Lima",
+    },
     email: "erick_manuel_lima@india.com",
     phone_number: "(27) 98613-1255",
     cpf: "051.610.742-99",
@@ -116,12 +116,10 @@ var LISTA = [
   },
   {
     id: 3,
-    name: [
-      {
-        firs_name: "Adriana",
-        about_name: "Ester Isabela das Neves",
-      },
-    ],
+    name: {
+      first_name: "Adriana",
+      about_name: "Ester Isabela das Neves",
+    },
     email: "adriana_dasneves@unifesp.br",
     phone_number: "(61) 99775-9642",
     cpf: "033.575.637-97",
@@ -130,12 +128,10 @@ var LISTA = [
   },
   {
     id: 4,
-    name: [
-      {
-        firs_name: "Bernardo",
-        about_name: "Augusto Renan de Paula",
-      },
-    ],
+    name: {
+      first_name: "Bernardo",
+      about_name: "Augusto Renan de Paula",
+    },
     email: "bernardo-depaula71@machina8.com.br",
     phone_number: "(42) 99339-9386",
     cpf: "368.462.063-70",
@@ -144,12 +140,10 @@ var LISTA = [
   },
   {
     id: 6,
-    name: [
-      {
-        firs_name: "Heitor",
-        about_name: "Elias Marcos Araújo",
-      },
-    ],
+    name: {
+      first_name: "Heitor",
+      about_name: "Elias Marcos Araújo",
+    },
     email: "heitor_araujo@platinium.com.br",
     phone_number: "(28) 98537-8580",
     cpf: "899.395.547-61",
@@ -158,12 +152,10 @@ var LISTA = [
   },
   {
     id: 7,
-    name: [
-      {
-        firs_name: "Elza",
-        about_name: "Teresinha Josefa da Rocha",
-      },
-    ],
+    name: {
+      first_name: "Elza",
+      about_name: "Teresinha Josefa da Rocha",
+    },
     email: "elza-darocha89@brf-br.com",
     phone_number: "(63) 98150-1398",
     cpf: "814.292.736-58",
