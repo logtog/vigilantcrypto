@@ -1,15 +1,23 @@
 {
   "name": "apijsestudo",
   "version": "1.0.0",
-  "description": "",
+  "description": "## This Branche is a test for Development",
   "main": "index.js",
   "scripts": {
     "build": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "logtog",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logtog/vigilantcrypto.git#server"
+  },
+  "bugs": {
+    "url": "https://github.com/logtog/vigilantcrypto/issues"
+  },
+  "homepage": "https://github.com/logtog/vigilantcrypto/tree/server#readme"
 }
