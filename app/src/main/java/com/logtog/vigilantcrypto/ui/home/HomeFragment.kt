@@ -1,5 +1,6 @@
 package com.logtog.vigilantcrypto.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.logtog.vigilantcrypto.databinding.FragmentHomeBinding
+import com.logtog.vigilantcrypto.ui.presentation.SearchActivity
 
 class HomeFragment : Fragment() {
 
@@ -40,8 +42,15 @@ class HomeFragment : Fragment() {
             adapter.submitList(it)
         }
 
+        binding.floatingActionButton.setOnClickListener {
+            val intent = Intent(requireActivity(),SearchActivity::class.java)
+
+            startActivity(intent)
+        }
+
         return root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

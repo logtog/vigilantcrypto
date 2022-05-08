@@ -16,4 +16,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/alert_item"
         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/add_cripto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

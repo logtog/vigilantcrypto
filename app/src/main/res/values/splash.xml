@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/design_default_color_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_fundo_branco</item>
+        <item name="android:animationDuration">@integer/material_motion_duration_long_1</item>
+        <item name="postSplashScreenTheme">@style/Theme.VigilantCrypto</item>
+    </style>
+</resources>
