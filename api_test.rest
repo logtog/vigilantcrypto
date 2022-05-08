@@ -1,4 +1,4 @@
-get http://localhost:8000/api/users
+get http://localhost:8000/api/users/
 
 ###
 post http://localhost:8000/api/users/
@@ -11,12 +11,19 @@ content-type: application/json
     }
 
 ###
-put http://localhost:8000/api/users/4
+put http://localhost:8000/api/users/2
 content-type: application/json
 
 {
-    "name": "fulano",
-    "password": "2425252525"
+  "name": {
+    "first_name": "Thiago",
+    "about_name": "Manuel Lima"
+  },
+  "email": "erick_manuel_lima@india.com",
+  "phone_number": "(27) 98613-1255",
+  "cpf": "051.610.742-99",
+  "birthday": "05/03/1976",
+  "password": "hBga3BdYKH"
 }
 
 ###
