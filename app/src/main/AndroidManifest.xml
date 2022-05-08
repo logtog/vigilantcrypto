@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App.Starting">
         <activity
-            android:name=".ui.presentation.SearchActivity"
+            android:name=".ui.presentation.SearchActivity" android:parentActivityName=".ui.presentation.SearchActivity"
             android:theme="@style/Theme.VigilantCrypto"
             android:exported="false" />
         <activity

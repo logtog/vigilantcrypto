@@ -2,9 +2,11 @@ package com.logtog.vigilantcrypto.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,7 +40,9 @@ class HomeFragment : Fragment() {
         binding.rvCoins.adapter = adapter
 
         homeViewModel.listCoin.observe(viewLifecycleOwner) {
-
+            if (homeViewModel.getItemCount() > 0){
+                binding.txtInfo.visibility = View.INVISIBLE
+            }
             adapter.submitList(it)
         }
 
@@ -50,7 +54,6 @@ class HomeFragment : Fragment() {
 
         return root
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -1,13 +1,20 @@
 package com.logtog.vigilantcrypto.ui.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.logtog.vigilantcrypto.R
+import androidx.appcompat.app.AppCompatActivity
+import com.logtog.vigilantcrypto.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySearchBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_search)
+        binding = ActivitySearchBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar2)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }
