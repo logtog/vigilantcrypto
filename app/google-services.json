@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147380258673",
+    "project_id": "vigilant-crypto",
+    "storage_bucket": "vigilant-crypto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147380258673:android:2ce20ff1b0cf58ce2598d0",
+        "android_client_info": {
+          "package_name": "com.logtog.vigilantcrypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147380258673-cop627h66vp0mplq1fu7kvq0ot2v7bf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.logtog.vigilantcrypto",
+            "certificate_hash": "92976abfcec328e12e839812e8969e72818052ac"
+          }
+        },
+        {
+          "client_id": "147380258673-dc51vpgk1at88032gci8dv29cs19t451.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_g6B3obft5nR_r--i-WyyJgZV3SO2iDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147380258673-dc51vpgk1at88032gci8dv29cs19t451.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

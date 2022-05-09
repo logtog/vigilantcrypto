@@ -1,0 +1,44 @@
+{
+	"data": [
+{
+	"cod": "BTC",
+	"name": "Bitcoin",
+	"imageCoin": "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
+	"price": 189545.50,
+	"timeAlert": "Desativado",
+	"percentage": "%20"
+},
+{
+"cod": "ETH",
+"name": "Ethereum",
+"imageCoin": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+"price": 32424.50,
+"timeAlert": "Desativado",
+"percentage": "%15"
+},
+{
+"cod": "BNB",
+"name": "Binance",
+"imageCoin": "https://cryptologos.cc/logos/bnb-bnb-logo.png",
+"price": 189545.50,
+"timeAlert": "Desativado",
+"percentage": "%2"
+},
+{
+"cod": "ETH",
+"name": "Ethereum",
+"imageCoin": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+"price": 32424.50,
+"timeAlert": "Desativado",
+"percentage": "%15"
+},
+{
+"cod": "ETH",
+"name": "Ethereum",
+"imageCoin": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+"price": 32424.50,
+"timeAlert": "Desativado",
+"percentage": "%15"
+}
+]
+}

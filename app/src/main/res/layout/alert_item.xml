@@ -34,7 +34,7 @@
             android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/iv_coin"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/first_names" />
+            tools:text="@sample/repositories.json/data/cod" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_coin_name"
@@ -43,7 +43,7 @@
             android:textColor="@color/pink"
             app:layout_constraintStart_toStartOf="@+id/tv_coin_cod"
             app:layout_constraintTop_toBottomOf="@id/tv_coin_cod"
-            tools:text="@tools:sample/last_names" />
+            tools:text="@sample/repositories.json/data/name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_price"
@@ -54,7 +54,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_coin_cod"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="452.00 U$" />
+            tools:text="@sample/repositories.json/data/price" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_time"
@@ -63,7 +63,7 @@
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_coin"
-            tools:text="Ativo a cada 10 Minutos" />
+            tools:text="@sample/repositories.json/data/timeAlert" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_percentage"
@@ -74,7 +74,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_time"
-            tools:text="+ 15%" />
+            tools:text="@sample/repositories.json/data/percentage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

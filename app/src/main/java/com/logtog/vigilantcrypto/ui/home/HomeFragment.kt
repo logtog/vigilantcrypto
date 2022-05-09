@@ -2,15 +2,14 @@ package com.logtog.vigilantcrypto.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.logtog.vigilantcrypto.databinding.FragmentHomeBinding
+import com.logtog.vigilantcrypto.ui.home.adapter.HomeListAdapter
 import com.logtog.vigilantcrypto.ui.presentation.SearchActivity
 
 class HomeFragment : Fragment() {

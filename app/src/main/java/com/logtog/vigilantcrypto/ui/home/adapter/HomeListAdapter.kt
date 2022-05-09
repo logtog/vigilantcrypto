@@ -1,4 +1,4 @@
-package com.logtog.vigilantcrypto.ui.home
+package com.logtog.vigilantcrypto.ui.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
