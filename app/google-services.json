@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "147380258673",
+    "firebase_url": "https://vigilant-crypto-default-rtdb.firebaseio.com",
     "project_id": "vigilant-crypto",
     "storage_bucket": "vigilant-crypto.appspot.com"
   },
@@ -14,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "147380258673-cop627h66vp0mplq1fu7kvq0ot2v7bf3.apps.googleusercontent.com",
+          "client_id": "147380258673-t3lvqcnoelspatmlpn0vksu8i23f61sj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.logtog.vigilantcrypto",
@@ -31,6 +32,7 @@
           "current_key": "AIzaSyA_g6B3obft5nR_r--i-WyyJgZV3SO2iDk"
         }
       ],
+
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [

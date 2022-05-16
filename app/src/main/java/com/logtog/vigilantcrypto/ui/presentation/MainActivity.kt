@@ -1,15 +1,16 @@
 package com.logtog.vigilantcrypto.ui.presentation
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.logtog.vigilantcrypto.R
 import com.logtog.vigilantcrypto.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-
     }
 }
+

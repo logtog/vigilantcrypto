@@ -8,10 +8,10 @@ class HomeViewModel : ViewModel() {
 
     private val coin : ArrayList<Coin>get(){
         val array = ArrayList<Coin>()
-        val cripto1 = Coin("BTC","Bitcoin","https://cryptologos.cc/logos/bitcoin-btc-logo.png",189545.50,"Desativado",45)
-        val cripto2 =  Coin("ETH","Ethereum","https://cryptologos.cc/logos/ethereum-eth-logo.png",189545.50,"Desativado",45)
-        array.add(cripto1)
-        array.add(cripto2)
+        //val cripto1 = Coin("BTC","Bitcoin","https://cryptologos.cc/logos/bitcoin-btc-logo.png",189545.50,"Desativado",45)
+        //val cripto2 =  Coin("ETH","Ethereum","https://cryptologos.cc/logos/ethereum-eth-logo.png",189545.50,"Desativado",45)
+        //array.add(cripto1)
+        //array.add(cripto2)
         return array
     }
 
