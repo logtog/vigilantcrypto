@@ -5,4 +5,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="add_cripto">add_cripto</string>
     <string name="click_floating_button">Aperte no botão flutuante para adicionar</string>
+    <string name="historico_de_alertas"><u>Histórico de Alertas</u></string>
+    <string name="grafico_em_breve">Gráfico (em breve)</string>
 </resources>
