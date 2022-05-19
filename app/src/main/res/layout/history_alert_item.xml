@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
-    app:cardElevation="8dp"
+    app:cardElevation="4dp"
     android:layout_margin="2dp"
     >
 
@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp">
+
+        android:padding="6dp">
 
         <TextView
             android:id="@+id/tv_price_history"

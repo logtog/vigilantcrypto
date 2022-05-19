@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,16 +17,17 @@ import com.logtog.vigilantcrypto.data.database.RealTimeDatabase
 import com.logtog.vigilantcrypto.data.model.Coin
 import com.logtog.vigilantcrypto.databinding.FragmentHomeBinding
 import com.logtog.vigilantcrypto.ui.home.adapter.HomeListAdapter
+import com.logtog.vigilantcrypto.ui.presentation.CoinPageActivity
 import com.logtog.vigilantcrypto.ui.presentation.SearchActivity
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), HomeListAdapter.OnItemClickListener {
 
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private lateinit var database : DatabaseReference
-    private val adapter by lazy { HomeListAdapter()}
+    private val adapter by lazy { HomeListAdapter(this)}
     private val binding get() = _binding!!
 
 
@@ -61,6 +63,7 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireActivity(),SearchActivity::class.java)
 
             startActivity(intent)
+
         }
 
         return root
@@ -106,4 +109,15 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun onItemClick(item: Coin, position: Int) {
+        val intent = Intent(requireActivity(), CoinPageActivity::class.java)
+        intent.putExtra("COD",item.cod.toString())
+        intent.putExtra("NAME",item.name.toString())
+        intent.putExtra("PRICE",item.price.toString())
+        intent.putExtra("IMAGECOIN",item.imageCoin.toString())
+        intent.putExtra("PERCENTAGE",item.percentage.toString())
+        intent.putExtra("TIMEALERT",item.timeAlert.toString())
+        startActivity(intent)
+}
 }

@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_add_50.xml" value="0.255" />
         <entry key="app/src/main/res/layout/activity_coin_page.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_notification_config.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/alert_item.xml" value="0.5" />
@@ -18,8 +19,9 @@
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/fragment_persons.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_wallet.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/history_alert_item.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/history_alert_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/return_menu.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/menu/search_menu.xml" value="0.5" />
       </map>
     </option>

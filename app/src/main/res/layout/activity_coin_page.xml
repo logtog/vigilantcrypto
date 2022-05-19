@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.presentation.CoinPageActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -35,6 +35,7 @@
 
     <TextView
         android:id="@+id/tv_name_page"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -53,7 +54,7 @@
         tools:text="@sample/repositories.json/data/price" />
 
     <ImageView
-        android:id="@+id/tv_alert_page"
+        android:id="@+id/iv_alert_page"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
@@ -90,12 +91,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_coins_page"
+
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_marginTop="20dp"
+        android:paddingStart="2dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_historico_page"
+        tools:itemCount="9"
         tools:listitem="@layout/history_alert_item" />
 
     <TextView
@@ -103,16 +109,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_alert_page"
-        app:layout_constraintEnd_toStartOf="@+id/tv_alert_page"
-        app:layout_constraintTop_toTopOf="@+id/tv_alert_page"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_alert_page"
+        app:layout_constraintEnd_toStartOf="@+id/iv_alert_page"
+        app:layout_constraintTop_toTopOf="@+id/iv_alert_page"
         tools:text="@sample/repositories.json/data/percentage" />
 
     <Button
         android:id="@+id/buy_btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Comprar"
+        android:textSize="18sp"
+        android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sell_btn"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,13 +129,15 @@
 
     <Button
         android:id="@+id/sell_btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
+        android:textSize="18sp"
+        android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="@+id/buy_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buy_btn"
-        app:layout_constraintTop_toTopOf="@+id/buy_btn"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintTop_toTopOf="@+id/buy_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
