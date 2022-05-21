@@ -5,9 +5,12 @@ import com.google.firebase.database.FirebaseDatabase
 
 class RealTimeDatabase {
 
-    fun getDataBaseRealtime(): DatabaseReference {
+    fun getDataBaseRealtimeCoin(): DatabaseReference {
         return FirebaseDatabase.getInstance("https://vigilant-crypto-default-rtdb.firebaseio.com").getReference("coins")
     }
 
+    fun getDataBaseRealtimeUser(): DatabaseReference {
+        return FirebaseDatabase.getInstance("https://vigilant-crypto-default-rtdb.firebaseio.com").getReference("users")
+    }
 }
 

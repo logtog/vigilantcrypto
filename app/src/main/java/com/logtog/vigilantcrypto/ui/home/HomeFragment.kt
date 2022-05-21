@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -28,6 +28,7 @@ class HomeFragment : Fragment(), HomeListAdapter.OnItemClickListener {
     // onDestroyView.
     private lateinit var database : DatabaseReference
     private val adapter by lazy { HomeListAdapter(this)}
+    private lateinit var firebaseAuth: FirebaseAuth
     private val binding get() = _binding!!
 
 
@@ -42,6 +43,7 @@ class HomeFragment : Fragment(), HomeListAdapter.OnItemClickListener {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        firebaseAuth = FirebaseAuth.getInstance()
 
         binding.rvCoins.layoutManager = LinearLayoutManager(activity)
 
@@ -73,7 +75,7 @@ class HomeFragment : Fragment(), HomeListAdapter.OnItemClickListener {
 
         binding.txtInfo.visibility = View.INVISIBLE
 
-        database = RealTimeDatabase().getDataBaseRealtime()
+        database = RealTimeDatabase().getDataBaseRealtimeCoin()
         val array = ArrayList<Coin>()
 
         binding.rvCoins.visibility = View.GONE

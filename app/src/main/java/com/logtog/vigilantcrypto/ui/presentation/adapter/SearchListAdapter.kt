@@ -1,39 +1,48 @@
 package com.logtog.vigilantcrypto.ui.presentation.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.logtog.vigilantcrypto.R
 import com.logtog.vigilantcrypto.data.model.CoinSearch
+import com.logtog.vigilantcrypto.databinding.CoinItemBinding
 
-class SearchListAdapter(private val coinsList: ArrayList<CoinSearch>) :
-    RecyclerView.Adapter<SearchListAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val cod: TextView = itemView.findViewById(R.id.tv_cod_search)
-        val name: TextView = itemView.findViewById(R.id.tv_name_search)
-        val imageCoin: ImageView = itemView.findViewById(R.id.iv_coin_search)
+class SearchListAdapter(private var clickListener: OnItemClickListener) :
+    ListAdapter<CoinSearch, SearchListAdapter.ViewHolder>(DiffCallback()){
+
+    inner class ViewHolder(private val binding: CoinItemBinding) : RecyclerView.ViewHolder(binding.root) {
+            fun initialize (item: CoinSearch, action: OnItemClickListener) {
+
+                binding.tvCodSearch.text = item.cod
+                binding.tvNameSearch.text = item.name
+                Glide.with(binding.root.context).load(item.imageCoin)
+                    .into(binding.ivCoinSearch)
+
+                itemView.setOnClickListener {
+                    action.onItemClick(item,bindingAdapterPosition)
+                }}
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.coin_item, parent, false)
-        return ViewHolder(itemView)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = CoinItemBinding.inflate(inflater, parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem = coinsList[position]
-        holder.cod.text = currentItem.cod
-        holder.name.text = currentItem.name
-        Glide.with(holder.itemView.context).load(currentItem.imageCoin).into(holder.imageCoin)
+        holder.initialize(getItem(position),clickListener)
     }
 
-    override fun getItemCount(): Int {
-        return coinsList.size
+
+    interface OnItemClickListener{
+        fun onItemClick(item: CoinSearch, position: Int)
     }
+}
+
+class DiffCallback: DiffUtil.ItemCallback<CoinSearch>() {
+    override fun areItemsTheSame(oldItem: CoinSearch, newItem: CoinSearch) = oldItem == newItem
+    override fun areContentsTheSame(oldItem: CoinSearch, newItem: CoinSearch) = oldItem == newItem
 }
