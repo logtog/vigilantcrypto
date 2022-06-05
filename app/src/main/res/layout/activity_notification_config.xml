@@ -76,9 +76,10 @@
 
     <Button
         android:id="@+id/confirm_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="60dp"
+        android:background="@drawable/rectangle"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/return_btn"

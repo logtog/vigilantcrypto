@@ -1,20 +1,25 @@
 package com.logtog.vigilantcrypto.ui.home.adapter
 
+import android.app.Activity
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.logtog.vigilantcrypto.R
 import com.logtog.vigilantcrypto.data.model.Coin
 import com.logtog.vigilantcrypto.databinding.AlertItemBinding
+import com.logtog.vigilantcrypto.ui.home.HomeFragment
 
 class HomeListAdapter(private var clickListener: OnItemClickListener) : ListAdapter<Coin, HomeListAdapter.ViewHolder>(DiffCallback()){
 
 
     inner class ViewHolder(private val binding: AlertItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: Coin){
-            val percentage = "%" + item.percentage.toString()
+            val percentage = item.percentage.toString() + "%"
             val price = "R$ " + item.price.toString()
             binding.tvCoinName.text = item.name
             binding.tvCoinCod.text = item.cod
@@ -25,7 +30,12 @@ class HomeListAdapter(private var clickListener: OnItemClickListener) : ListAdap
                 .load(item.imageCoin).into(binding.ivCoin)
             }
         fun initialize(item: Coin,action:OnItemClickListener){
-            val percentage = "%" + item.percentage.toString()
+            val percentage =  item.percentage.toString() + "%"
+
+            if (item.percentage?.toDouble()!! < 0) {
+                binding.tvPercentage.setTextColor(Color.RED)
+            }
+
             val price = "R$ " + item.price.toString()
             binding.tvCoinName.text = item.name
             binding.tvCoinCod.text = item.cod
@@ -58,6 +68,6 @@ class HomeListAdapter(private var clickListener: OnItemClickListener) : ListAdap
     }
 }
 class DiffCallback: DiffUtil.ItemCallback<Coin>() {
-    override fun areItemsTheSame(oldItem: Coin, newItem: Coin) = oldItem == newItem
-    override fun areContentsTheSame(oldItem: Coin, newItem: Coin) = oldItem == newItem
+    override fun areItemsTheSame(oldItem: Coin, newItem: Coin) = oldItem.cod == newItem.cod
+    override fun areContentsTheSame(oldItem: Coin, newItem: Coin) = oldItem.cod == newItem.cod
 }

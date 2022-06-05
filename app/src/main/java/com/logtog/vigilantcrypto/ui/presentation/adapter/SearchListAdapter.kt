@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.logtog.vigilantcrypto.R
 import com.logtog.vigilantcrypto.data.model.CoinSearch
 import com.logtog.vigilantcrypto.databinding.CoinItemBinding
 
@@ -23,8 +24,16 @@ class SearchListAdapter(private var clickListener: OnItemClickListener) :
 
                 itemView.setOnClickListener {
                     action.onItemClick(item,bindingAdapterPosition)
-                }}
+                }
+
+                if (item.saved == true) {
+                    binding.ivAddSearch.setBackgroundResource(R.drawable.ic_baseline_remove_50)
+                } else {
+                    binding.ivAddSearch.setBackgroundResource(R.drawable.ic_baseline_add_50)
+                }
+            }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)

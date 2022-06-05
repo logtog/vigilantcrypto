@@ -19,29 +19,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/jura"
+        android:text="V"
+        android:textColor="#28AABC"
+        android:textSize="120sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/jura"
+        android:text="V"
+        android:textColor="#D728CA"
+        android:textSize="120sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/logo_black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
+        android:fontFamily="@font/jura"
+        android:text="V"
+        android:textColor="@color/black"
+        android:textSize="120sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <EditText
+        app:layout_constraintTop_toBottomOf="@+id/logo_black"
+        android:layout_marginTop="70dp"
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
-        android:inputType="textPersonName"
         android:hint="E-mail"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        tools:layout_editor_absoluteY="277dp" />
 
     <EditText
         android:id="@+id/et_password"
@@ -50,7 +80,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="16dp"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -60,19 +90,22 @@
     <Button
         android:id="@+id/access_btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Button"
+        android:layout_height="40dp"
         android:layout_marginHorizontal="90dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/rectangle"
+        android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
 
     <TextView
         android:id="@+id/tv_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:textColor="#575757"
         android:text="Esqueceu a Senha?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="#575757"
         android:text="Criar Conta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
